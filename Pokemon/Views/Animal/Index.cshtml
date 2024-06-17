@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Pokemon.Models.Animal>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@* <p>
+    <a asp-action="Create">Create New</a>
+</p> *@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MyProperty)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>
+                @Html.ActionLink("Crear", "Create", new { /* id=item.PrimaryKey */ })
+            </th>
+        </tr>
+@foreach (var item in Model) {
+            <tr>
+                <th>nombre</th>
+                <th>Daño fisico</th>
+                <th>daño amgico</th>
+                <th>vida</th>
+                <th>valocidad</th>
+                <th>ID</th>
+            <td></tr><tr><td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+                </td><td>
+                @Html.DisplayFor(modelItem => item.DainoFisico)
+                </td>
+                <td>
+                @Html.DisplayFor(modelItem => item.DainoMagico)
+                </td>
+                <td>
+                @Html.DisplayFor(modelItem => item.Vida)
+                </td>
+                <td>
+                @Html.DisplayFor(modelItem => item.velocidad)
+                </td>
+                <td>
+                @Html.DisplayFor(modelItem => item.MyProperty)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new {item.MyProperty }) |         
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

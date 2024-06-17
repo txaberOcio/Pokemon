@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page".ToUpper();
+    String pedo = "aa";
+    ViewData["Title"] = pedo;
+    ViewData["caramelito"]= "ajo";
+
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h1>
+        @* @ViewData["caramelito"].ToString() *@
+        <a asp-area="" asp-controller="Animal" asp-action="Index">Crear equipo</a>
+    </h1>
+
+    <h1>
+        @* @ViewData["caramelito"].ToString() *@
+        @if ((int)ViewData["AnimalesProp"] > 0)
+        {
+            <a asp-area="" asp-controller="Animal" asp-action="Pelear">Pelear</a>
+        }
+        
+    </h1>
+</div>

@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Pokemon.Models.Animal>
+
+@{
+    ViewData["Title"] = "Pelear";
+}
+
+<h1>Pelear</h1>
+@if (Model.Any())
+{
+    
+}
+@* <table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MyProperty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DainoMagico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DainoFisico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.velocidad)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MyProperty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DainoMagico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DainoFisico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.velocidad)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+ *@
