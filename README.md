@@ -1,3 +1,3 @@
 # Pokemon
 
-Este es un proyecto para probar .net
+Este es un proyecto para probar C#
